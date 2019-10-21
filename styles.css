@@ -1,0 +1,192 @@
+*,
+*:before,
+*:after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit; }
+
+html {
+  font-size: 62.5%; }
+  @media (max-width: 75em) {
+    html {
+      font-size: 50%; } }
+  @media (max-width: 44.5em) {
+    html {
+      font-size: 45%; } }
+
+body {
+  box-sizing: border-box;
+  height: 100vh;
+  overflow: hidden;
+  font-family: "Grenze", serif; }
+
+img {
+  width: 10%;
+  position: absolute;
+  z-index: 0;
+  top: 4rem;
+  left: 50%;
+  transform: translateX(-50%);
+  animation: moveDown 3s linear 1s; }
+
+.flex-container {
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  width: 55%;
+  align-items: center;
+  transform: translate(-50%, -20%);
+  display: flex;
+  flex-direction: column;
+  z-index: 5;
+  overflow: hidden; }
+  @media (max-width: 75em) {
+    .flex-container {
+      width: 80%; } }
+  @media (max-width: 44.5em) {
+    .flex-container {
+      width: 98%;
+      top: 10%; } }
+
+.navigation {
+  width: 100%;
+  background-color: rgba(226, 223, 233, 0.45);
+  border-radius: 2rem;
+  box-shadow: inset 6px 6px 0.5rem rgba(0, 0, 0, 0.35), inset 6px -6px 0.5rem rgba(0, 0, 0, 0.35), inset -6px 6px 0.5rem rgba(0, 0, 0, 0.25); }
+  .navigation__list {
+    display: flex;
+    justify-content: space-around; }
+    .navigation__list-item {
+      list-style: none;
+      padding: 1.5rem 2rem;
+      font-size: 2rem;
+      width: 20%;
+      text-transform: uppercase;
+      text-align: center;
+      letter-spacing: 1px; }
+      @media (max-width: 44.5em) {
+        .navigation__list-item {
+          font-size: 1.8rem; } }
+      .navigation__list-item:hover {
+        cursor: pointer; }
+    .navigation__list-link {
+      transition: all 0.5s;
+      text-decoration: none;
+      color: #fff;
+      white-space: nowrap; }
+
+.drop-down {
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+  border-radius: 2rem;
+  overflow: hidden;
+  margin-top: 0; }
+  .drop-down__container {
+    background-color: rgba(226, 223, 233, 0.25);
+    width: 20%;
+    padding: 2rem 1px;
+    font-size: 1.8rem;
+    text-align: center;
+    border-radius: 2rem;
+    box-shadow: inset -6px -6px 0.5rem rgba(0, 0, 0, 0.25), inset 6px -6px 0.5rem rgba(0, 0, 0, 0.35), inset -6px 6px 0.5rem rgba(0, 0, 0, 0.25);
+    overflow: hidden; }
+    @media (max-width: 44.5em) {
+      .drop-down__container {
+        width: 25%; } }
+  .drop-down__list {
+    list-style: none; }
+  .drop-down__item {
+    padding: 1.5rem 0;
+    border-radius: 1rem; }
+    @media (max-width: 44.5em) {
+      .drop-down__item {
+        padding: 1.5rem 1rem;
+        white-space: nowrap;
+        font-size: 1.6rem; } }
+    .drop-down__item:hover {
+      cursor: pointer;
+      background-color: rgba(226, 223, 233, 0.15); }
+    .drop-down__item:hover > a {
+      color: #dfbd00; }
+  .drop-down__link {
+    text-decoration: none;
+    color: #fff; }
+
+.main-heading {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 12rem;
+  font-weight: 800;
+  z-index: 2;
+  text-transform: uppercase;
+  letter-spacing: 1rem;
+  animation: letterJoin 1s linear;
+  transition: all 0.7s;
+  padding-top: 0; }
+  @media (max-width: 75em) {
+    .main-heading {
+      top: 45%; } }
+  @media (max-width: 44.5em) {
+    .main-heading {
+      top: 30%;
+      font-size: 10rem;
+      letter-spacing: 0.5rem; } }
+  .main-heading__span--left {
+    color: rgba(255, 255, 255, 0.3);
+    text-shadow: 0.4rem 0.4rem 0.6rem rgba(0, 0, 0, 0.1); }
+  .main-heading__span--right {
+    color: rgba(223, 189, 0, 0.15);
+    text-shadow: 0.6rem 0.6rem 0.5rem rgba(0, 0, 0, 0.3); }
+
+@keyframes letterJoin {
+  0% {
+    letter-spacing: 25rem;
+    opacity: 0; }
+  100% {
+    letter-spacing: 1rem;
+    opacity: 1; } }
+
+.desc {
+  position: absolute;
+  top: 59.5%;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 2.5rem;
+  font-weight: 300;
+  z-index: 5;
+  color: rgba(255, 255, 255, 0.6);
+  text-transform: uppercase; }
+  @media (max-width: 75em) {
+    .desc {
+      top: 53%; } }
+  @media (max-width: 44.5em) {
+    .desc {
+      top: 36%; } }
+
+.full-screen-vid {
+  position: absolute;
+  top: -80%;
+  left: 0;
+  width: 100vw;
+  height: 100vh; }
+  @media (max-width: 75em) {
+    .full-screen-vid {
+      top: -90%; } }
+  @media (max-width: 44.5em) {
+    .full-screen-vid {
+      top: -95%;
+      left: -90rem; } }
+  .full-screen-vid__video {
+    min-height: 100vh;
+    min-width: 100vw; }
+  .full-screen-vid__overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 200%;
+    width: 246%;
+    z-index: 1;
+    background-color: rgba(230, 170, 180, 0.15); }

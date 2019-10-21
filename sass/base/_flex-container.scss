@@ -1,0 +1,21 @@
+.flex-container {
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  width: 55%;
+  align-items: center;
+  transform: translate(-50%, -20%);
+  display: flex;
+  flex-direction: column;
+  z-index: 5;
+  overflow: hidden;
+
+  @include respond(tab-land) {
+    width: 80%;
+  }
+
+  @include respond(phone) {
+    width: 98%;
+    top: 10%;
+  }
+}

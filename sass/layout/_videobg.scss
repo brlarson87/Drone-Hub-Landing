@@ -1,0 +1,31 @@
+.full-screen-vid {
+  position: absolute;
+  top: -80%;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+
+  @include respond(tab-land) {
+    top: -90%;
+  }
+
+  @include respond(phone) {
+    top: -95%;
+    left: -90rem;
+  }
+
+  &__video {
+    min-height: 100vh;
+    min-width: 100vw;
+  }
+
+  &__overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 200%;
+    width: 246%;
+    z-index: 1;
+    background-color: rgba(230, 170, 180, 0.15);
+  }
+}

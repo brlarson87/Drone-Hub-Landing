@@ -1,0 +1,36 @@
+*,
+*:before,
+*:after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+
+  @include respond(tab-land) {
+    font-size: 50%;
+  }
+
+  @include respond(phone) {
+    font-size: 45%;
+  }
+}
+
+body {
+  box-sizing: border-box;
+  height: 100vh;
+  overflow: hidden;
+  font-family: "Grenze", serif;
+}
+
+img {
+  width: 10%;
+  position: absolute;
+  z-index: 0;
+  top: 4rem;
+  left: 50%;
+  transform: translateX(-50%);
+  animation: moveDown 3s linear 1s;
+}
