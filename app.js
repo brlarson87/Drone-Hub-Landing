@@ -12,41 +12,37 @@ for (let i = 0; i < items.length; i++) {
   dropContainers[i].style.visibility = "hidden";
 
   items[i].addEventListener("mouseenter", function() {
-    dropContainers[i].style.visibility = "visible";
-    heading.style.transform = "translate(-50%, 10%)";
-    heading.style.opacity = 0.4;
-    links[i].style.color = "#dfbd00";
-    links[i].style.textShadow = "1px 1px 2px rgba(0,0,0,0.9)";
+    dropDown(i);
   });
 
   items[i].addEventListener("mouseleave", function() {
-    dropContainers[i].style.visibility = "hidden";
-    heading.style.transform = "translate(-50%, -50%)";
-    heading.style.opacity = 1;
-    links[i].style.color = "#fff";
+    slideUp(i);
   });
 
   dropContainers[i].addEventListener("mouseenter", function() {
-    dropContainers[i].style.visibility = "visible";
-    heading.style.opacity = 0.4;
-    heading.style.transform = "translate(-50%, 10%)";
-    links[i].style.color = "#dfbd00";
-    links[i].style.textShadow = "1px 1px 2px rgba(0,0,0,0.9)";
+    dropDown(i);
   });
 
   dropContainers[i].addEventListener("mouseleave", function() {
-    dropContainers[i].style.visibility = "hidden";
-    heading.style.transform = "translate(-50%, -50%)";
-    heading.style.opacity = 1;
-    links[i].style.color = "#fff";
+    slideUp(i);
   });
+}
+
+function dropDown(i) {
+  dropContainers[i].style.visibility = "visible";
+  heading.classList.add("u-hide-title");
+  links[i].classList.add("u-active-item");
+}
+
+function slideUp(i) {
+  dropContainers[i].style.visibility = "hidden";
+  heading.classList.remove("u-hide-title");
+  links[i].classList.remove("u-active-item");
 }
 
 video.playbackRate = 0.7;
 
 let bgLayout = document.querySelector(".full-screen-vid");
-
-console.log(bgLayout);
 
 bgLayout.style.transition = "all 6.5s";
 

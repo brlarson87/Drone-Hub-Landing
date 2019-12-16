@@ -1,3 +1,11 @@
+.u-active-item {
+  color: #dfbd00 !important;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.9) !important; }
+
+.u-hide-title {
+  transform: translate(-50%, 10%) !important;
+  opacity: 0.4 !important; }
+
 *,
 *:before,
 *:after {
@@ -132,7 +140,7 @@ img {
   @media (max-width: 44.5em) {
     .main-heading {
       top: 30%;
-      font-size: 10rem;
+      font-size: 8rem;
       letter-spacing: 0.5rem; } }
   .main-heading__span--left {
     color: rgba(255, 255, 255, 0.3);
@@ -164,7 +172,7 @@ img {
       top: 53%; } }
   @media (max-width: 44.5em) {
     .desc {
-      top: 36%; } }
+      top: 34%; } }
 
 .full-screen-vid {
   position: absolute;
